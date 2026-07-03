@@ -1,0 +1,55 @@
+.cell {
+  min-height: 72px;
+  padding: 6px 8px;
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 0.15s, opacity 0.15s, box-shadow 0.15s;
+  position: relative;
+}
+
+.cell:hover {
+  box-shadow: 0 0 0 2px var(--color-primary) inset;
+}
+
+.overflow {
+  opacity: 0.35;
+}
+
+.selected {
+  background-color: #2563eb !important;
+  color: #ffffff;
+  box-shadow: 0 0 0 2px #1d4ed8 inset;
+}
+
+.selected .occupancy {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.inRange {
+  background-color: #93c5fd !important;
+  color: #1e3a5f;
+  box-shadow: 0 0 0 1px #60a5fa inset;
+}
+
+.inRange .occupancy {
+  color: rgba(30, 58, 95, 0.7);
+}
+
+.dayNumber {
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.occupancy {
+  font-size: 11px;
+  color: var(--color-text-secondary);
+  line-height: 1.2;
+}
